@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef92494-9c52-4256-b7c5-1fa79b189eb5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/trainermenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/trainermenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/welcomemenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/welcomemenu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-assignment-02-NOS.iws" beforeDir="false" afterPath="$PROJECT_DIR$/web-assignment-02-NOS.iws" afterDir="false" />
     </list>
@@ -62,7 +58,7 @@
       <workItem from="1591140189712" duration="735000" />
       <workItem from="1591211440963" duration="3839000" />
       <workItem from="1591304069358" duration="692000" />
-      <workItem from="1591305717123" duration="4644000" />
+      <workItem from="1591305717123" duration="5395000" />
     </task>
     <servers />
   </component>
