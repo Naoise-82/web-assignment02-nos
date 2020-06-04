@@ -1,0 +1,58 @@
+#{extends 'main.html'/}
+
+#{set title: 'Trainer Comment Page'/}
+
+#{trainermenu id: "trainercommentpage" /}
+
+<section class="ui segment">
+    <div>
+        <h2><i class="id card icon"></i> ${trainer.firstname} ${trainer.lastname}</h2>
+    </div>
+</section>
+<section class="ui segment">
+    <div>
+        <h2>
+            <i class="user icon"></i> ${member.firstname} ${member.lastname}'s Assessments
+        </h2>
+    </div>
+
+        #{list items:assessments, as:'assessment'}
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Weight (kg)</th>
+                        <th>Chest</th>
+                        <th>Thigh</th>
+                        <th>Upper Arm</th>
+                        <th>Waist</th>
+                        <th>Hips</th>
+                        <th>Comment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ui item"> ${assessment.date} </td>
+                        <td class="ui item"> ${assessment.weight} </td>
+                        <td class="ui item"> ${assessment.chest} </td>
+                        <td class="ui item"> ${assessment.thigh} </td>
+                        <td class="ui item"> ${assessment.upperArm} </td>
+                        <td class="ui item"> ${assessment.waist} </td>
+                        <td class="ui item"> ${assessment.hips} </td>
+                        <td class="ui item"> ${assessment.comment} </td>
+                    </tr>
+                </tbody>
+            </table>
+            <form class="ui form" action="/trainercommentpage/addcomment/${member.id}/${assessment.id}" method="POST">
+                <div class="field">
+                    <label>Trainer Comment</label>
+                        <label>
+                            <input placeholder="Enter your comment here..." type="text" name="comment">
+                        </label>
+                    <button class="ui small blue submit button">Add/Update Comment</button>
+                </div>
+            </form>
+        #{/list}
+
+
+</section>

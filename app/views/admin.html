@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+#{menu id:"admin"/}
+
+<section class="ui segment">
+    <h2 class="ui header">
+        All Todo items in the Database:
+    </h2>
+    <table class="ui fixed table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Todo</th>
+        </tr>
+        </thead>
+        <tbody>
+            #{list items:assessmentList, as:'assessment'}
+                <tr>
+                    <td> ${assessment.id} </td>
+                    <td> ${assessment.title} </td>
+                </tr>
+            #{/list}
+        </tbody>
+    </table>
+</section>

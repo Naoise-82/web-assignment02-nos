@@ -1,0 +1,22 @@
+<section class="ui segment">
+
+  <div class="ui horizontal segments">
+    <div class="ui segment">
+      <div style="text-align: center;"><i class="massive blue ui user icon"></i></div>
+      <h3 class="ui centered header">${_member.firstname} ${_member.lastname}</h3>
+    </div>
+    <div class="ui segment">
+      <div style="text-align: center;"><i class="massive ui heartbeat icon"></i></div>
+      <h3 class="ui centered header">Current BMI:<br>${_memberStats.get(0)}</h3>
+    </div>
+    <div class="ui segment">
+      <div style="text-align: center;"><i class="ui massive user md icon"></i></div>
+      <h3 class="ui centered header">Current BMI Category:<br>${_memberStats.get(1)}</h3>
+    </div>
+    <div class="ui segment">
+      <div style="text-align: center;">#{if _memberStats.get(2) < _memberStats.get(3) || _memberStats.get(2) > _memberStats.get(3)} <i class=" massive red weight icon"></i>#{/if}
+      #{elseif _memberStats.get(2) == _memberStats.get(3)} <i class=" massive green weight icon"></i>#{/elseif}</div>
+      <h3 class="ui centered header">Ideal Body Weight: ${_memberStats.get(2)} kg <br>Current Weight: ${_memberStats.get(3)} kg</h3>
+    </div>
+  </div>
+</section>

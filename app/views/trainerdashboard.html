@@ -1,0 +1,31 @@
+#{extends 'main.html' /}
+
+#{set title:'Trainer Dashboard' /}
+
+#{trainermenu id:"trainerdashboard"/}
+
+<section class="ui segment">
+<div>
+    <h2><i class="id card icon"></i> ${trainer.firstname} ${trainer.lastname}</h2>
+</div>
+</section>
+
+<section class="ui segment">
+    <h2 class="ui header">
+        <i class="ui users icon"></i> Current Member List
+    </h2>
+    #{list items:members, as:'member'}
+        <section class="ui segment">
+            <h3 class="ui header">
+            <i class="ui user icon"></i> ${member.firstname} ${member.lastname}
+            </h3>
+            <h4 class="ui header"> Total Assessments: %{assessmentCount = member.getAssessments().size()}% ${assessmentCount} </h4>
+            <a href="/trainercommentpage/${member.id}" class="ui icon button">
+                <i title="View Assessments" class="icon folder open"></i>
+            </a>
+            <a href="/trainerdashboard/deletemember/${member.id}" class="ui icon button">
+                <i title="Delete this Member" class="ui black trash alternate icon"></i>
+            </a>
+        </section>
+    #{/list}
+</section>

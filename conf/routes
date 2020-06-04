@@ -1,0 +1,38 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                                            Start.index
+
+GET     /signup                                                      Accounts.signup
+GET     /login                                                       Accounts.login
+POST    /register                                                    Accounts.register
+POST    /authenticate                                                Accounts.authenticate
+GET     /logout                                                      Accounts.logout
+POST    /updatemember                                                Accounts.updateMember
+
+GET     /memberdashboard                                             MemberDashboard.index
+POST    /memberdashboard/addassessment                               MemberDashboard.addAssessment
+GET     /memberdashboard/deleteassessment/{memberid}/{assessmentid}  MemberDashboard.deleteAssessment
+GET     /updatedetails                                               UpdateDetails.index
+
+GET     /trainerdashboard                                            TrainerDashboard.index
+GET     /trainercommentpage/{id}                                     TrainerCommentPage.index
+POST    /trainercommentpage/addcomment/{memberid}/{assessmentid}     TrainerCommentPage.addComment
+GET     /trainerdashboard/deletemember/{id}                          TrainerDashboard.deleteMember
+
+GET     /about                                                       About.index
+GET     /admin                                                       Admin.index
+
+GET     /gymutility/calculatestartingBMI                             GymUtility.calculateStartingBMI
+GET     /gymutility/weighttrend                                      GymUtility.weightTrend
+
+# Ignore favicon requests
+GET     /favicon.ico                                                 404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

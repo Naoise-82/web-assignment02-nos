@@ -1,0 +1,77 @@
+#{extends 'main.html' /}
+#{set title:'Member Dashboard' /}
+
+#{menu id:"memberdashboard"/}
+
+#{memberpanel member: member, startingBMI: startingBMI, memberStats: memberStats/}
+
+<form class="ui segment form" action="/memberdashboard/addassessment" method="POST">
+  <h3 class="ui header"><i class="plus icon"></i> Add New Assessment </h3>
+  <p><i>Note - the current date and time will be automatically added</i></p>
+  <div class="fields">
+    <!--<div class="field">
+      <input placeholder="Date (YY/MM/DD)" type="text" name="date">
+    </div>-->
+    <div class="field">
+      <input placeholder="Weight (kg)" type="number" step="0.01" name="weight">
+    </div>
+    <div class="field">
+      <input title="Chest (cm)" placeholder="Chest (cm)" type="number" step="0.01" name="chest">
+    </div>
+    <div class="field">
+      <input title="Thigh (cm)" placeholder="Thigh (cm)" type="number" step="0.01" name="thigh">
+    </div>
+    <div class="field">
+      <input title="Upper Arm (cm)" placeholder="Upper Arm (cm)" type="number" step="0.01" name="upperArm">
+    </div>
+    <div class="field">
+      <input title="Waist (cm)" placeholder="Waist (cm)" type="number" step="0.01" name="waist">
+    </div>
+    <div class="field">
+      <input title="Hips" placeholder="Hips (cm)" type="number" step="0.01" name="hips">
+    </div>
+  </div>
+  <button class="ui blue submit button">Add Assessment</button>
+</form>
+
+<section class="ui segment">
+  <header class="ui header">
+    <i class="list icon"></i> Previous Assessments
+  </header>
+  <table class="ui fixed table">
+    <thead>
+      <tr>
+        <th>Date & Time</th>
+        <th>Weight (kg)</th>
+        <th>Chest (cm)</th>
+        <th>Thigh (cm)</th>
+        <th>Upper Arm (cm)</th>
+        <th>Waist (cm)</th>
+        <th>Hips (cm)</th>
+        <th>Weight Tracking</th>
+        <th>Trainer Comment</th>
+        <th>Delete Assessment</th>
+      </tr>
+    </thead>
+    <tbody>
+        #{list items: assessmentList, as:'assessment'}
+          <tr>
+            <td class="ui item"> ${assessment.date} </td>
+            <td class="ui item"> ${assessment.weight} </td>
+            <td class="ui item"> ${assessment.chest} </td>
+            <td class="ui item"> ${assessment.thigh} </td>
+            <td class="ui item"> ${assessment.upperArm} </td>
+            <td class="ui item"> ${assessment.waist} </td>
+            <td class="ui item"> ${assessment.hips} </td>
+            <td class="ui item"> #{if assessment_isLast && assessmentList.get(assessment_index-1).weight > member.startingWeight} <i class="large green arrow circle down icon"></i> #{/if}
+                                 #{elseif assessment_isLast && assessmentList.get(assessment_index-1).weight < member.startingWeight} <i class="large red arrow circle up icon"></i>#{/elseif}
+                                 #{elseif assessment_index < assessmentList.size() && assessmentList.get(assessment_index).weight > assessmentList.get(assessment_index-1).weight} <i class="large green arrow circle down icon"></i> #{/elseif}
+                                 #{elseif assessment_index < assessmentList.size() && assessmentList.get(assessment_index).weight < assessmentList.get(assessment_index-1).weight} <i class="large red arrow circle up icon"></i> #{/elseif}
+                                 #{elseif assessment_index < assessmentList.size() && assessmentList.get(assessment_index).weight == assessmentList.get(assessment_index-1).weight} <i class="large blue minus icon"></i> #{/elseif}</td>
+            <td class="ui item"> ${assessment.comment} </td>
+            <td><a href="/memberdashboard/deleteassessment/${member.id}/${assessment.id}"><button class="ui tiny red button">Delete</button></a></td>
+          </tr>
+        #{/list}
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,50 @@
+#{extends 'main.html' /}
+#{set title:'Update Details' /}
+
+#{menu id:"updatedetails"/}
+
+<section class="ui segment">
+    <h2 class="ui header"><i class="blue ui user icon"></i>${member.firstname} ${member.lastname}</h2>
+
+    <div class="ui two column grid basic middle aligned segment">
+        <div class="column">
+            <form class="ui stacked segment form" action="/updatemember" method="POST">
+                <h3 class="ui header">Update Details</h3>
+                <div class="two fields">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input placeholder="First Name" type="text" name="firstname">
+                    </div>
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input placeholder="Last Name" type="text" name="lastname">
+                    </div>
+                    <div class="field">
+                        <label>Gender</label>
+                        <input placeholder="Gender" type="text" name="gender">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Height (cm)</label>
+                    <input placeholder="Height (cm)" type="number" step="0.01" name="height">
+                </div>
+                <div class="field">
+                    <label>Starting Weight (cm)</label>
+                    <input placeholder="Starting Weight (cm)" type="number" step="0.01" name="startingWeight">
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input placeholder="Email" type="text" name="email">
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="password" name="password">
+                </div>
+                <button class="ui blue submit button">Update</button>
+            </form>
+        </div>
+        <div class="column">
+            <i class="massive clipboard list icon"></i>
+        </div>
+    </div>
+</section>

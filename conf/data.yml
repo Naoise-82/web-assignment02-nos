@@ -1,0 +1,48 @@
+Assessment(t1):
+  date: 20-05-20 15:13:27
+  weight: 89.56
+  chest: 44.25
+  thigh: 55.89
+  upperArm: 36.77
+  waist: 84.77
+  hips:  87.55
+  comment: Feel the Burn!!
+
+Assessment(t2):
+  date: 20-05-19 14:25:33
+  weight: 87.55
+  chest: 44.25
+  thigh: 55.70
+  upperArm: 36.55
+  waist: 84.70
+  hips:  87.15
+  comment: Max the Zone!!
+
+Assessment(t3):
+  date: 20-05-17 16:33:55
+  weight: 88.30
+  chest: 44.25
+  thigh: 55.65
+  upperArm: 36.32
+  waist: 84.82
+  hips:  87.55
+  comment: Push the Envelope!!
+
+Member(m2):
+  firstname: Lance
+  lastname: Uppercut
+  email: lance@uppercut.com
+  password: lance
+  gender: Male
+  height: 195
+  startingWeight: 120
+  assessments:
+    - t1
+    - t2
+    - t3
+
+Trainer(tr1):
+  firstname: Brock
+  lastname: Strongo
+  email: brock@strongo.com
+  password: strongo
