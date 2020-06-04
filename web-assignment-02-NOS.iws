@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef92494-9c52-4256-b7c5-1fa79b189eb5" name="Default Changelist" comment="" />
+    <list default="true" id="7ef92494-9c52-4256-b7c5-1fa79b189eb5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/web-assignment-02-NOS.iws" beforeDir="false" afterPath="$PROJECT_DIR$/web-assignment-02-NOS.iws" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +57,7 @@
       <workItem from="1591140189712" duration="735000" />
       <workItem from="1591211440963" duration="3839000" />
       <workItem from="1591304069358" duration="692000" />
-      <workItem from="1591305717123" duration="1478000" />
+      <workItem from="1591305717123" duration="2247000" />
     </task>
     <servers />
   </component>
