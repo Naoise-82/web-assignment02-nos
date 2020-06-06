@@ -8,6 +8,9 @@ import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Model for the Member objects in the Web App
+ */
 @Entity
 public class Member extends Model {
 
@@ -44,19 +47,10 @@ public class Member extends Model {
         return this.password.equals(password);
     }
 
-
-    /**
-     * Getter for the member's height
-     * @return The Member's height
-     */
     public float getHeight() {
         return height;
     }
 
-    /**
-     * Getter for the member's starting weight
-     * @return The member's starting weight
-     */
     public float getStartingWeight() {
         return startingWeight;
     }

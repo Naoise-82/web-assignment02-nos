@@ -1,14 +1,16 @@
 package controllers;
 
-import java.util.ArrayList;
-import java.util.List;
-import models.Assessment;
+import models.Member;
 import play.Logger;
 import play.mvc.Controller;
-import models.Member;
 
+/**
+ * Controller class for the Update Details page
+ */
 public class UpdateDetails extends Controller {
-
+    /**
+     * Renders the Update Details page.
+     */
     public static void index() {
         Logger.info("Rendering Update Details");
         Member member = Accounts.getLoggedInMember();

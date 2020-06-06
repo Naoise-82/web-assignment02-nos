@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef92494-9c52-4256-b7c5-1fa79b189eb5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Web Dev Assign 02 Reflection - Naoise O'Sullivan.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$b Dev Assign 02 Reflection - Naoise O'Sullivan.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/About.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/About.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/GymUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/GymUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MemberDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MemberDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/TrainerCommentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/TrainerCommentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/TrainerDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/TrainerDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/UpdateDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/UpdateDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Assessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Assessment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/data.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-assignment-02-NOS.iws" beforeDir="false" afterPath="$PROJECT_DIR$/web-assignment-02-NOS.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,13 +36,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1caGQp7DnXQQjTzaCvGMoCRzVqx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -58,12 +76,16 @@
       <workItem from="1591140189712" duration="735000" />
       <workItem from="1591211440963" duration="3839000" />
       <workItem from="1591304069358" duration="692000" />
-      <workItem from="1591305717123" duration="5395000" />
+      <workItem from="1591305717123" duration="7046000" />
+      <workItem from="1591474898449" duration="2862000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1590892167906">
@@ -74,10 +96,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590759803358" />
-    <state x="740" y="246" key="FileChooserDialogImpl" timestamp="1591305628554">
+    <state x="740" y="246" key="FileChooserDialogImpl" timestamp="1591314100753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="246" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591305628554" />
+    <state x="740" y="246" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591314100753" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1591047255168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

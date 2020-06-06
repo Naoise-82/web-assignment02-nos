@@ -3,10 +3,13 @@ package models;
 import play.db.jpa.Model;
 import javax.persistence.Entity;
 
-//from https://www.w3schools.com/java/java_date.asp
+// Date/Time implementation sourced from https://www.w3schools.com/java/java_date.asp
 import java.time.LocalDateTime; // Import the LocalDateTime class
 import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 
+/**
+ * Model for the assessments recorded for members of the gym
+ */
 @Entity
 public class Assessment extends Model
 {
@@ -20,6 +23,15 @@ public class Assessment extends Model
 
     public String comment;
 
+    /**
+     * Adds an assessment to the member
+     * @param weight The recorded weight
+     * @param chest The recorded chest measurement
+     * @param thigh The recorded thigh measurement
+     * @param upperArm The recorded upper arm measurement
+     * @param waist The recorded waist measurement
+     * @param hips the recorded hip measurement
+     */
     public Assessment(float weight, float chest, float thigh, float upperArm, float waist, float hips)
     {
         // get the current date and time and re-format it to look nice and readable

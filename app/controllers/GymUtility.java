@@ -1,18 +1,24 @@
 package controllers;
 
-import play.Logger;
-import play.mvc.Controller;
 import models.Member;
-import models.Assessment;
-import java.util.ArrayList;
-import java.util.List;
+import play.mvc.Controller;
 
+/**
+ * A Utility class used for calculating various biometric data, with code partly shared with
+ * Programming Assignment 02
+ */
 public class GymUtility extends Controller {
 
+    /**
+     * Returns the member's BMI in String form
+     * @param member The members whose BMI is being calculated
+     * @return The BMI of the member as a String
+     */
     public static String calculateCurrentBMI(Member member) {
         String currentBMI;
         float latestWeight;
 
+        // check if there are any assessments, and use the starting weight if there are none
         if (member.getAssessments().isEmpty()) {
             latestWeight = member.getStartingWeight();
         } else latestWeight = member.getAssessments().get(0).weight;
@@ -23,6 +29,11 @@ public class GymUtility extends Controller {
         return currentBMI;
     }
 
+    /**
+     * Determines the BMI category of the member based on their latest weight
+     * @param member The member being analysed
+     * @return A String stating the BMI category
+     */
     public static String determineBMICategory(Member member) {
         String BMICategory = "";
         float latestWeight;
@@ -48,6 +59,11 @@ public class GymUtility extends Controller {
         return BMICategory;
     }
 
+    /**
+     * Calculates a members ideal body weight based on the Devine Formula
+     * @param member The member being Analysed
+     * @return The ideal body weight as a String
+     */
     public static String calculateIdealBodyWeight(Member member) {
         String idealBodyWeight = "";
         float idealBodyWeightFloat = 1;

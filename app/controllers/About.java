@@ -2,9 +2,10 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
-import java.util.*;
-import models.*;
 
+/**
+ * Controller for the About page of the site
+ */
 public class About extends Controller
 {
   public static void index() {

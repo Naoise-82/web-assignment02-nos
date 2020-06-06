@@ -8,6 +8,9 @@ import play.mvc.Controller;
 
 public class Admin extends Controller
 {
+    /**
+     * Unused admin page (from the Playlist projects)
+     */
     public static void index()
     {
         Logger.info("Rendering Admin");

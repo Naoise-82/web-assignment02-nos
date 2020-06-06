@@ -7,8 +7,15 @@ import play.Logger;
 import play.mvc.Controller;
 import models.Member;
 
+/**
+ * Controller class for the Member Dashboard
+ */
 public class MemberDashboard extends Controller
 {
+  /**
+   * Renders the Member's dashboard page, including a table fo their assessments
+   * and some current biometric data
+   */
   public static void index() {
     Logger.info("Rendering Member Dashboard");
     Member member = Accounts.getLoggedInMember();
@@ -23,7 +30,6 @@ public class MemberDashboard extends Controller
     // 1: BMI Category
     // 2: Ideal Body Weight
     // 3: Current Body Weight
-    // 4: Syntax for weight trend arrow
 
     List<String> memberStats = new ArrayList<>();
 
@@ -35,6 +41,7 @@ public class MemberDashboard extends Controller
       memberStats.add(Float.toString(member.getStartingWeight()));
     } else memberStats.add(Float.toString(member.getAssessments().get(0).weight));
 
+    // generate an ArrayList for the recorded weights from each assessment
     List<Float> assessmentWeight = new ArrayList<>();
 
     for(Assessment assessment : assessmentList)
@@ -45,6 +52,15 @@ public class MemberDashboard extends Controller
     render ("/memberdashboard.html", assessmentList, assessmentWeight, member, memberStats, startingBMI);
   }
 
+  /**
+   * Adds an assessment of vaiour biometric measurements to the database
+   * @param weight The recorded weight
+   * @param chest The recorded chest measurement
+   * @param thigh The recorded thigh measurement
+   * @param upperArm The recorded upper arm measurement
+   * @param waist The recorded waist measurement
+   * @param hips the recorded hip measurement
+   */
   public static void addAssessment(float weight, float chest, float thigh, float upperArm, float waist, float hips)
   {
     Assessment assessment = new Assessment(weight, chest, thigh, upperArm, waist, hips);
@@ -56,7 +72,11 @@ public class MemberDashboard extends Controller
     redirect("/memberdashboard");
   }
 
-
+  /**
+   * Removes an assessment froma members account
+   * @param assessmentid the database ID of the assessment
+   * @param memberid the database ID of the member
+   */
   public static void deleteAssessment(Long assessmentid, Long memberid)
   {
     Member member = Member.findById(memberid);
