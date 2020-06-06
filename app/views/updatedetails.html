@@ -8,37 +8,37 @@
 
     <div class="ui two column grid basic middle aligned segment">
         <div class="column">
-            <form class="ui stacked segment form" action="/updatemember" method="POST">
+            <form class="ui segment form" action="/updatemember" method="POST">
                 <h3 class="ui header">Update Details</h3>
                 <div class="two fields">
                     <div class="field">
                         <label>First Name</label>
-                        <input placeholder="First Name" type="text" name="firstname">
+                        <input placeholder="Current: ${member.firstname}" type="text" name="firstname">
                     </div>
                     <div class="field">
                         <label>Last Name</label>
-                        <input placeholder="Last Name" type="text" name="lastname">
+                        <input placeholder="Current: ${member.lastname}" type="text" name="lastname">
                     </div>
                     <div class="field">
                         <label>Gender</label>
-                        <input placeholder="Gender" type="text" name="gender">
+                        <input placeholder="Current: ${member.gender}" type="text" name="gender">
                     </div>
                 </div>
-                <div class="field">
+                <!--<div class="field">
                     <label>Height (cm)</label>
                     <input placeholder="Height (cm)" type="number" step="0.01" name="height">
                 </div>
                 <div class="field">
                     <label>Starting Weight (cm)</label>
                     <input placeholder="Starting Weight (cm)" type="number" step="0.01" name="startingWeight">
-                </div>
+                </div>-->
                 <div class="field">
                     <label>Email</label>
-                    <input placeholder="Email" type="text" name="email">
+                    <input placeholder="Current: ${member.email}" type="text" name="email">
                 </div>
                 <div class="field">
                     <label>Password</label>
-                    <input type="password" name="password">
+                    <input placeholder="enter a new password" type="password" name="password">
                 </div>
                 <button class="ui blue submit button">Update</button>
             </form>
