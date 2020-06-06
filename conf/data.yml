@@ -42,7 +42,7 @@ Member(m2):
     - t3
 
 Trainer(tr1):
-  firstname: Brock
+  firstname: Rock
   lastname: Strongo
-  email: brock@strongo.com
+  email: rock@strongo.com
   password: strongo
