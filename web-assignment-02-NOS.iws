@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef92494-9c52-4256-b7c5-1fa79b189eb5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-assignment-02-NOS.iws" beforeDir="false" afterPath="$PROJECT_DIR$/web-assignment-02-NOS.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,6 +67,7 @@
       <workItem from="1591304069358" duration="692000" />
       <workItem from="1591305717123" duration="7046000" />
       <workItem from="1591474898449" duration="9647000" />
+      <workItem from="1591561146674" duration="636000" />
     </task>
     <servers />
   </component>
